@@ -1,0 +1,517 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+		<title>&#23454;&#39564;II&#65306;&#31995;&#32479;&#23545;&#38543;&#26426;&#20449;&#21495;&#21709;&#24212;&#30340;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#21151;&#29575;&#35889;&#20998;&#26512;&#21450;&#24212;&#29992;&#23454;&#39564;</title>
+		<meta name="generator" content="MATLAB 8.3">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<meta name="DC.date" content="2016-11-10">
+		<meta name="DC.source" content="Ex2_3.m">
+		<style type="text/css">
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			font,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent
+			}
+			
+			body {
+				line-height: 1
+			}
+			
+			ol,
+			ul {
+				list-style: none
+			}
+			
+			blockquote,
+			q {
+				quotes: none
+			}
+			
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			
+			:focus {
+				outine: 0
+			}
+			
+			ins {
+				text-decoration: none
+			}
+			
+			del {
+				text-decoration: line-through
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			html {
+				min-height: 100%;
+				margin-bottom: 1px;
+			}
+			
+			html body {
+				height: 100%;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 10px;
+				color: #000;
+				line-height: 140%;
+				background: #fff none;
+				overflow-y: scroll;
+			}
+			
+			html body td {
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			h1 {
+				padding: 0px;
+				margin: 0px 0px 25px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: #d55000;
+				line-height: 100%;
+				font-weight: normal;
+			}
+			
+			h2 {
+				padding: 0px;
+				margin: 0px 0px 8px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+				border-bottom: 1px solid #d6d4d4;
+				display: block;
+			}
+			
+			h3 {
+				padding: 0px;
+				margin: 0px 0px 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+			}
+			
+			a {
+				color: #005fce;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #005fce;
+				text-decoration: underline;
+			}
+			
+			a:visited {
+				color: #004aa0;
+				text-decoration: none;
+			}
+			
+			p {
+				padding: 0px;
+				margin: 0px 0px 20px;
+			}
+			
+			img {
+				padding: 0px;
+				margin: 0px 0px 20px;
+				border: none;
+			}
+			
+			p img,
+			pre img,
+			tt img,
+			li img,
+			h1 img,
+			h2 img {
+				margin-bottom: 0px;
+			}
+			
+			ul {
+				padding: 0px;
+				margin: 0px 0px 20px 23px;
+				list-style: square;
+			}
+			
+			ul li {
+				padding: 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ul li ul {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 23px;
+			}
+			
+			ul li ol li {
+				list-style: decimal;
+			}
+			
+			ol {
+				padding: 0px;
+				margin: 0px 0px 20px 0px;
+				list-style: decimal;
+			}
+			
+			ol li {
+				padding: 0px;
+				margin: 0px 0px 7px 23px;
+				list-style-type: decimal;
+			}
+			
+			ol li ol {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ol li ol li {
+				list-style-type: lower-alpha;
+			}
+			
+			ol li ul {
+				padding-top: 7px;
+			}
+			
+			ol li ul li {
+				list-style: square;
+			}
+			
+			.content {
+				font-size: 1.2em;
+				line-height: 140%;
+				padding: 20px;
+			}
+			
+			pre,
+			code {
+				font-size: 12px;
+			}
+			
+			tt {
+				font-size: 1.2em;
+			}
+			
+			pre {
+				margin: 0px 0px 20px;
+			}
+			
+			pre.codeinput {
+				padding: 10px;
+				border: 1px solid #d3d3d3;
+				background: #f7f7f7;
+			}
+			
+			pre.codeoutput {
+				padding: 10px 11px;
+				margin: 0px 0px 20px;
+				color: #4c4c4c;
+			}
+			
+			pre.error {
+				color: red;
+			}
+			
+			@media print {
+				pre.codeinput,
+				pre.codeoutput {
+					word-wrap: break-word;
+					width: 100%;
+				}
+			}
+			
+			span.keyword {
+				color: #0000FF
+			}
+			
+			span.comment {
+				color: #228B22
+			}
+			
+			span.string {
+				color: #A020F0
+			}
+			
+			span.untermstring {
+				color: #B20000
+			}
+			
+			span.syscmd {
+				color: #B28C00
+			}
+			
+			.footer {
+				width: auto;
+				padding: 10px 0px;
+				margin: 25px 0px 0px;
+				border-top: 1px dotted #878787;
+				font-size: 0.8em;
+				line-height: 140%;
+				font-style: italic;
+				color: #878787;
+				text-align: left;
+				float: none;
+			}
+			
+			.footer p {
+				margin: 0px;
+			}
+			
+			.footer a {
+				color: #878787;
+			}
+			
+			.footer a:hover {
+				color: #878787;
+				text-decoration: underline;
+			}
+			
+			.footer a:visited {
+				color: #878787;
+			}
+			
+			table th {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: middle;
+				border: 1px solid #d6d4d4;
+				font-weight: bold;
+			}
+			
+			table td {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: top;
+				border: 1px solid #d6d4d4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<h1>&#23454;&#39564;II&#65306;&#31995;&#32479;&#23545;&#38543;&#26426;&#20449;&#21495;&#21709;&#24212;&#30340;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#21151;&#29575;&#35889;&#20998;&#26512;&#21450;&#24212;&#29992;&#23454;&#39564;</h1>
+			<!--introduction-->
+			<p>&#20043;&#19977;&#65306;&#31995;&#32479;&#23545;&#38543;&#26426;&#20449;&#21495;&#21709;&#24212;&#30340;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#21450;&#20223;&#30495; &#21442;&#29031;&#20363; 3.6-4 2016.11.4</p>
+			<!--/introduction-->
+			<h2>Contents</h2>
+			<div>
+				<ul>
+					<li>
+						<a href="#1">&#20934;&#22791;&#29615;&#22659;</a>
+					</li>
+					<li>
+						<a href="#2">&#29983;&#25104;&#38543;&#26426;&#20449;&#21495;&#26679;&#26412;</a>
+					</li>
+					<li>
+						<a href="#3">&#35774;&#35745;&#28388;&#27874;&#22120;</a>
+					</li>
+					<li>
+						<a href="#5">&#20272;&#35745;&#36755;&#20837;&#20449;&#21495;&#30340;&#33258;&#30456;&#20851;&#21644;&#21151;&#29575;&#35889;</a>
+					</li>
+					<li>
+						<a href="#7">&#31995;&#32479;&#27714;&#35299;</a>
+					</li>
+					<li>
+						<a href="#9">&#22270;&#24418;&#23637;&#31034;</a>
+					</li>
+				</ul>
+			</div>
+			<h2>&#20934;&#22791;&#29615;&#22659;<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+clc
+</pre>
+			<h2>&#29983;&#25104;&#38543;&#26426;&#20449;&#21495;&#26679;&#26412;<a name="2"></a></h2>
+			<p>&#29983;&#25104;[0,1]&#20043;&#38388;&#30340;N&#28857;&#39640;&#26031;&#38543;&#26426;&#20449;&#21495;</p><pre class="codeinput">N=500;                                      <span class="comment">%&#26679;&#26412;&#38271;&#24230;N=500&#65292;&#23545;&#24212;&#26102;&#38271;25ms</span>
+xt=random(<span class="string">'norm'</span>,0,1,1,N);                  <span class="comment">%&#20135;&#29983;1*N&#20010;&#39640;&#26031;&#38543;&#26426;&#25968;</span>
+<span class="comment">% &#26174;&#31034;&#26102;&#22495;&#27874;&#24418;</span>
+figure,plot(xt);
+title(<span class="string">'&#38543;&#26426;&#20449;&#21495;&#26102;&#22495;&#27874;&#24418;'</span>)
+</pre><img vspace="5" hspace="5" src="Ex2_3_01.png" alt="">
+			<h2>&#35774;&#35745;&#28388;&#27874;&#22120;<a name="3"></a></h2><pre class="codeinput"><span class="comment">%&#20914;&#28608;&#21709;&#24212;</span>
+ht=fir1(101,[0.3 0.4]);                     <span class="comment">% 101&#38454;&#24102;&#36890;&#28388;&#27874;&#22120;&#65292;&#25968;&#23383;&#25130;&#27490;&#39057;&#29575;&#20026;0.3&#21644;0.4</span>
+<span class="comment">% &#26174;&#31034;&#20914;&#28608;&#21709;&#24212;&#20989;&#25968;ht</span>
+figure,plot(ht)
+title(<span class="string">'&#20914;&#28608;&#21709;&#24212;&#20989;&#25968;ht'</span>)
+</pre><img vspace="5" hspace="5" src="Ex2_3_02.png" alt=""> <pre class="codeinput"><span class="comment">%&#20256;&#36882;&#20989;&#25968;</span>
+HW=fft(ht,2*N);                             <span class="comment">%2N&#28857;&#28388;&#27874;&#22120;&#39057;&#29575;&#21709;&#24212;&#65288;&#31995;&#32479;&#20256;&#36755;&#20989;&#25968;&#65289;</span>
+<span class="comment">% &#26174;&#31034;&#20256;&#36882;&#20989;&#25968;HW</span>
+figure,plot((1:N)/N,abs(HW(1:N)));
+title(<span class="string">'&#20256;&#36882;&#20989;&#25968;HW'</span>)
+</pre><img vspace="5" hspace="5" src="Ex2_3_03.png" alt="">
+			<h2>&#20272;&#35745;&#36755;&#20837;&#20449;&#21495;&#30340;&#33258;&#30456;&#20851;&#21644;&#21151;&#29575;&#35889;<a name="5"></a></h2>
+			<p>&#33258;&#30456;&#20851;</p><pre class="codeinput">Rxx=xcorr(xt,<span class="string">'biased'</span>);                     <span class="comment">%&#30452;&#25509;&#27861;&#20272;&#35745;&#30333;&#22122;&#22768;&#30340;&#33258;&#30456;&#20851;&#20989;&#25968;</span>
+<span class="comment">% &#26174;&#31034;&#33258;&#30456;&#20851;&#20989;&#25968;Rxx</span>
+figure,stem(Rxx)
+title(<span class="string">'&#36755;&#20837;&#33258;&#30456;&#20851;&#20989;&#25968;Rxx'</span>)
+</pre><img vspace="5" hspace="5" src="Ex2_3_04.png" alt="">
+			<p>&#21151;&#29575;&#35889;</p><pre class="codeinput">Sxx=abs(fft(xt,2*N).^2)/(2*N);              <span class="comment">%&#21608;&#26399;&#22270;&#27861;&#20272;&#35745;&#30333;&#22122;&#22768;&#30340;&#21151;&#29575;&#35889;</span>
+</pre>
+			<h2>&#31995;&#32479;&#27714;&#35299;<a name="7"></a></h2>
+			<p>&#39057;&#22495;&#27714;&#35299;&#65306;&#36755;&#20986;&#21151;&#29575;&#35889;</p><pre class="codeinput">HW2=abs(HW).^2;                             <span class="comment">%&#31995;&#32479;&#30340;&#21151;&#29575;&#20256;&#36755;&#20989;&#25968;</span>
+Syy=Sxx.*HW2;                               <span class="comment">%&#36755;&#20986;&#20449;&#21495;&#30340;&#21151;&#29575;&#35889;</span>
+</pre>
+			<p>&#26102;&#22495;&#27714;&#35299;&#65306;&#36755;&#20986;&#33258;&#30456;&#20851;</p><pre class="codeinput">Ryy=fftshift(ifft(Syy));                    <span class="comment">%&#29992;IFFT&#27714;&#36755;&#20986;&#20449;&#21495;&#30340;&#33258;&#30456;&#20851;&#20989;&#25968;</span>
+                                                   <span class="comment">%&#20989;&#25968;fftshift&#23545;&#25968;&#32452;&#36827;&#34892;&#31227;&#20301;</span>
+</pre>
+			<h2>&#22270;&#24418;&#23637;&#31034;<a name="9"></a></h2><pre class="codeinput">w=(1:N)/N;                                  <span class="comment">%&#21151;&#29575;&#35889;&#23494;&#24230;&#27178;&#36724;&#22352;&#26631;</span>
+t=(-N:N-1)/N*(N/20000);                     <span class="comment">%&#33258;&#30456;&#20851;&#20989;&#25968;&#27178;&#36724;&#22352;&#26631;</span>
+subplot(4,1,1);plot(w,abs(Sxx(1:N)));       <span class="comment">%&#36755;&#20837;&#20449;&#21495;&#21151;&#29575;&#35889;&#23494;&#24230;</span>
+xlabel(<span class="string">'&#24402;&#19968;&#21270;&#39057;&#29575;f'</span>);ylabel(<span class="string">'Sxx(f)'</span>);title(<span class="string">'&#36755;&#20837;&#20449;&#21495;&#21151;&#29575;&#35889;&#23494;&#24230;'</span>);
+subplot(4,1,2);plot(w,abs(HW2(1:N)));       <span class="comment">%&#31995;&#32479;&#30340;&#21151;&#29575;&#20256;&#36755;&#20989;&#25968;</span>
+xlabel(<span class="string">'&#24402;&#19968;&#21270;&#39057;&#29575;f'</span>);ylabel(<span class="string">'H2(f)'</span>);title(<span class="string">'&#31995;&#32479;&#30340;&#21151;&#29575;&#20256;&#36755;&#20989;&#25968;'</span>);
+subplot(4,1,3);plot(w,abs(Syy(1:N)));       <span class="comment">%&#36755;&#20986;&#20449;&#21495;&#30340;&#21151;&#29575;&#35889;&#23494;&#24230;</span>
+xlabel(<span class="string">'&#24402;&#19968;&#21270;&#39057;&#29575;f'</span>);ylabel(<span class="string">'Syy(f)'</span>);title(<span class="string">'&#36755;&#20986;&#20449;&#21495;&#30340;&#21151;&#29575;&#35889;&#23494;&#24230;'</span>);
+subplot(4,1,4);plot(t,Ryy);                 <span class="comment">%&#36755;&#20986;&#20449;&#21495;&#30340;&#33258;&#30456;&#20851;&#20989;&#25968;</span>
+xlabel(<span class="string">'&#24402;&#19968;&#21270;&#39057;&#29575;f'</span>);ylabel(<span class="string">'Ryy(f)'</span>);title(<span class="string">'&#36755;&#20986;&#20449;&#21495;&#30340;&#33258;&#30456;&#20851;&#20989;&#25968;'</span>);
+</pre><img vspace="5" hspace="5" src="Ex2_3_05.png" alt="">
+			<p class="footer"><br>
+				<a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p>
+		</div>
+		<!--
+##### SOURCE BEGIN #####
+%% 实验II：系统对随机信号响应的统计特性分析、功率谱分析及应用实验
+% 之三：系统对随机信号响应的统计特性分析及仿真
+% 参照例 3.6-4
+% 2016.11.4
+
+%% 准备环境
+clear all
+close all
+clc
+
+%% 生成随机信号样本
+% 生成[0,1]之间的N点高斯随机信号
+N=500;                                      %样本长度N=500，对应时长25ms
+xt=random('norm',0,1,1,N);                  %产生1*N个高斯随机数
+% 显示时域波形
+figure,plot(xt);
+title('随机信号时域波形')
+%% 设计滤波器
+%冲激响应
+ht=fir1(101,[0.3 0.4]);                     % 101阶带通滤波器，数字截止频率为0.3和0.4
+% 显示冲激响应函数ht
+figure,plot(ht)
+title('冲激响应函数ht')
+%%
+%传递函数
+HW=fft(ht,2*N);                             %2N点滤波器频率响应（系统传输函数）
+% 显示传递函数HW
+figure,plot((1:N)/N,abs(HW(1:N)));  
+title('传递函数HW')                                            
+%% 估计输入信号的自相关和功率谱
+% 自相关
+Rxx=xcorr(xt,'biased');                     %直接法估计白噪声的自相关函数
+% 显示自相关函数Rxx
+figure,stem(Rxx)
+title('输入自相关函数Rxx')  
+%%
+% 功率谱
+Sxx=abs(fft(xt,2*N).^2)/(2*N);              %周期图法估计白噪声的功率谱
+%% 系统求解
+% 频域求解：输出功率谱
+HW2=abs(HW).^2;                             %系统的功率传输函数
+Syy=Sxx.*HW2;                               %输出信号的功率谱
+%%
+% 时域求解：输出自相关
+Ryy=fftshift(ifft(Syy));                    %用IFFT求输出信号的自相关函数
+                                                   %函数fftshift对数组进行移位
+%% 图形展示
+w=(1:N)/N;                                  %功率谱密度横轴坐标
+t=(-N:N-1)/N*(N/20000);                     %自相关函数横轴坐标
+subplot(4,1,1);plot(w,abs(Sxx(1:N)));       %输入信号功率谱密度
+xlabel('归一化频率f');ylabel('Sxx(f)');title('输入信号功率谱密度');
+subplot(4,1,2);plot(w,abs(HW2(1:N)));       %系统的功率传输函数
+xlabel('归一化频率f');ylabel('H2(f)');title('系统的功率传输函数');
+subplot(4,1,3);plot(w,abs(Syy(1:N)));       %输出信号的功率谱密度
+xlabel('归一化频率f');ylabel('Syy(f)');title('输出信号的功率谱密度');
+subplot(4,1,4);plot(t,Ryy);                 %输出信号的自相关函数
+xlabel('归一化频率f');ylabel('Ryy(f)');title('输出信号的自相关函数');
+##### SOURCE END #####
+-->
+	</body>
+
+</html>

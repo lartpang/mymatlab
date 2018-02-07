@@ -1,0 +1,678 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+		<title>&#23454;&#39564;III&#65306;&#36890;&#20449;&#20449;&#21495;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#20223;&#30495;&#23454;&#29616;&#21450;&#24212;&#29992;</title>
+		<meta name="generator" content="MATLAB 8.5">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<meta name="DC.date" content="2016-11-12">
+		<meta name="DC.source" content="EX3_1.m">
+		<style type="text/css">
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			font,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent
+			}
+			
+			body {
+				line-height: 1
+			}
+			
+			ol,
+			ul {
+				list-style: none
+			}
+			
+			blockquote,
+			q {
+				quotes: none
+			}
+			
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			
+			:focus {
+				outine: 0
+			}
+			
+			ins {
+				text-decoration: none
+			}
+			
+			del {
+				text-decoration: line-through
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			html {
+				min-height: 100%;
+				margin-bottom: 1px;
+			}
+			
+			html body {
+				height: 100%;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 10px;
+				color: #000;
+				line-height: 140%;
+				background: #fff none;
+				overflow-y: scroll;
+			}
+			
+			html body td {
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			h1 {
+				padding: 0px;
+				margin: 0px 0px 25px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: #d55000;
+				line-height: 100%;
+				font-weight: normal;
+			}
+			
+			h2 {
+				padding: 0px;
+				margin: 0px 0px 8px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+				border-bottom: 1px solid #d6d4d4;
+				display: block;
+			}
+			
+			h3 {
+				padding: 0px;
+				margin: 0px 0px 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+			}
+			
+			a {
+				color: #005fce;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #005fce;
+				text-decoration: underline;
+			}
+			
+			a:visited {
+				color: #004aa0;
+				text-decoration: none;
+			}
+			
+			p {
+				padding: 0px;
+				margin: 0px 0px 20px;
+			}
+			
+			img {
+				padding: 0px;
+				margin: 0px 0px 20px;
+				border: none;
+			}
+			
+			p img,
+			pre img,
+			tt img,
+			li img,
+			h1 img,
+			h2 img {
+				margin-bottom: 0px;
+			}
+			
+			ul {
+				padding: 0px;
+				margin: 0px 0px 20px 23px;
+				list-style: square;
+			}
+			
+			ul li {
+				padding: 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ul li ul {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 23px;
+			}
+			
+			ul li ol li {
+				list-style: decimal;
+			}
+			
+			ol {
+				padding: 0px;
+				margin: 0px 0px 20px 0px;
+				list-style: decimal;
+			}
+			
+			ol li {
+				padding: 0px;
+				margin: 0px 0px 7px 23px;
+				list-style-type: decimal;
+			}
+			
+			ol li ol {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ol li ol li {
+				list-style-type: lower-alpha;
+			}
+			
+			ol li ul {
+				padding-top: 7px;
+			}
+			
+			ol li ul li {
+				list-style: square;
+			}
+			
+			.content {
+				font-size: 1.2em;
+				line-height: 140%;
+				padding: 20px;
+			}
+			
+			pre,
+			code {
+				font-size: 12px;
+			}
+			
+			tt {
+				font-size: 1.2em;
+			}
+			
+			pre {
+				margin: 0px 0px 20px;
+			}
+			
+			pre.codeinput {
+				padding: 10px;
+				border: 1px solid #d3d3d3;
+				background: #f7f7f7;
+			}
+			
+			pre.codeoutput {
+				padding: 10px 11px;
+				margin: 0px 0px 20px;
+				color: #4c4c4c;
+			}
+			
+			pre.error {
+				color: red;
+			}
+			
+			@media print {
+				pre.codeinput,
+				pre.codeoutput {
+					word-wrap: break-word;
+					width: 100%;
+				}
+			}
+			
+			span.keyword {
+				color: #0000FF
+			}
+			
+			span.comment {
+				color: #228B22
+			}
+			
+			span.string {
+				color: #A020F0
+			}
+			
+			span.untermstring {
+				color: #B20000
+			}
+			
+			span.syscmd {
+				color: #B28C00
+			}
+			
+			.footer {
+				width: auto;
+				padding: 10px 0px;
+				margin: 25px 0px 0px;
+				border-top: 1px dotted #878787;
+				font-size: 0.8em;
+				line-height: 140%;
+				font-style: italic;
+				color: #878787;
+				text-align: left;
+				float: none;
+			}
+			
+			.footer p {
+				margin: 0px;
+			}
+			
+			.footer a {
+				color: #878787;
+			}
+			
+			.footer a:hover {
+				color: #878787;
+				text-decoration: underline;
+			}
+			
+			.footer a:visited {
+				color: #878787;
+			}
+			
+			table th {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: middle;
+				border: 1px solid #d6d4d4;
+				font-weight: bold;
+			}
+			
+			table td {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: top;
+				border: 1px solid #d6d4d4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<h1>&#23454;&#39564;III&#65306;&#36890;&#20449;&#20449;&#21495;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#20223;&#30495;&#23454;&#29616;&#21450;&#24212;&#29992;</h1>
+			<!--introduction-->
+			<p>&#20043;&#19968;&#65306; Hilbert&#21464;&#25442;&#30340;&#23454;&#29616;&#26041;&#27861; &#21442;&#29031;&#20363; 4.7-1 2016.11.4</p>
+			<!--/introduction-->
+			<h2>Contents</h2>
+			<div>
+				<ul>
+					<li>
+						<a href="#1">&#20934;&#22791;&#29615;&#22659;</a>
+					</li>
+					<li>
+						<a href="#2">&#29983;&#25104;&#27491;&#24358;&#20449;&#21495;&#26679;&#26412;</a>
+					</li>
+					<li>
+						<a href="#3">&#35774;&#35745;hilbert&#28388;&#27874;&#22120;</a>
+					</li>
+					<li>
+						<a href="#5">1&#65306;&#26102;&#22495;&#21464;&#25442;&#21367;&#31215;&#36816;&#31639;&#24471;&#21040;cos&#25968;&#25454;</a>
+					</li>
+					<li>
+						<a href="#6">......&#26102;&#22495;&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;</a>
+					</li>
+					<li>
+						<a href="#10">2&#65306;&#39057;&#22495;&#21464;&#25442;&#20056;&#31215;&#24471;&#21040;cos&#25968;&#25454;</a>
+					</li>
+					<li>
+						<a href="#11">......&#39057;&#22495;&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;</a>
+					</li>
+					<li>
+						<a href="#15">3.&#23545;&#27604;&#20869;&#32622;&#20989;&#25968; hilbert</a>
+					</li>
+					<li>
+						<a href="#16">......&#20869;&#32622;&#20989;&#25968; hilbert&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;</a>
+					</li>
+				</ul>
+			</div>
+			<h2>&#20934;&#22791;&#29615;&#22659;<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+clc
+</pre>
+			<h2>&#29983;&#25104;&#27491;&#24358;&#20449;&#21495;&#26679;&#26412;<a name="2"></a></h2>
+			<p>N=100&#28857;&#27491;&#24358;&#20449;&#21495;1000Hz&#65292;&#37319;&#26679;&#29575;16000Hz</p><pre class="codeinput">N = 100;
+f = 1000;
+fs = 16000;
+sinData = sin(2*pi*f/fs*(1:N));
+figure(1),plot(sinData)
+title(<span class="string">'100&#28857;&#27491;&#24358;&#20449;&#21495;1000Hz&#65292;&#37319;&#26679;&#29575;16000Hz'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_01.png" alt="">
+			<h2>&#35774;&#35745;hilbert&#28388;&#27874;&#22120;<a name="3"></a></h2>
+			<p>&#26102;&#22495;&#20914;&#28608;&#21709;&#24212;</p><pre class="codeinput">step = 30;
+h = zeros(1,step);
+<span class="keyword">for</span> i = 1 : step
+    ind = bitand(abs(i-step/2),1);
+    <span class="keyword">if</span>(ind == 1)
+        h(i) = 2/pi/(i-step/2);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+<span class="comment">% show h(n)</span>
+figure(2), stem(h)
+title(<span class="string">'&#26102;&#22495;&#20914;&#28608;&#21709;&#24212;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_02.png" alt="">
+			<p>&#39057;&#22495;&#20256;&#36882;&#20989;&#25968;</p><pre class="codeinput">H = zeros(1,N);
+<span class="keyword">for</span> p = 1 : N
+    <span class="keyword">if</span>(p&lt;= N/2)
+        H(p) = -j;
+    <span class="keyword">else</span>
+        H(p) = j;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+<span class="comment">% show H(p)</span>
+figure, stem(imag(H))
+title(<span class="string">'&#39057;&#22495;&#20914;&#28608;&#21709;&#24212;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_03.png" alt="">
+			<h2>1&#65306;&#26102;&#22495;&#21464;&#25442;&#21367;&#31215;&#36816;&#31639;&#24471;&#21040;cos&#25968;&#25454;<a name="5"></a></h2>
+			<p>&#26102;&#22495;&#21367;&#31215;</p><pre class="codeinput">cosData = conv(sinData,h,<span class="string">'same'</span>);
+figure(1);plot(cosData,<span class="string">'r'</span>)
+title(<span class="string">'&#26102;&#22495;&#21464;&#25442;&#21367;&#31215;&#36816;&#31639;&#24471;&#21040;cos&#25968;&#25454;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_04.png" alt="">
+			<h2>......&#26102;&#22495;&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;<a name="6"></a></h2>
+			<p>&#30830;&#35748;&#30456;&#20301;&#24046;pi/2 &#33258;&#30456;&#20851;&#30830;&#23450;&#24310;&#36831;&#28857;&#25968;D</p><pre class="codeinput">[c,l]=xcorr(sinData,cosData,<span class="string">'coeff'</span>);
+<span class="comment">% figure,stem(l,c)</span>
+[m,indx] = max(c);
+D = abs(indx - N) +1
+</pre><pre class="codeoutput">
+D =
+
+     4
+
+</pre>
+			<p>&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;</p><pre class="codeinput">figure;plot(sinData);hold <span class="string">on</span>
+plot([cosData(D:end) zeros(1,D-1)],<span class="string">'r'</span>)
+title(<span class="string">'&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;'</span>)
+legend(<span class="string">'&#21464;&#25442;&#21069;'</span>,<span class="string">'&#21464;&#25442;&#21518;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_05.png" alt="">
+			<p>D&#36716;&#25442;&#25104;&#24359;&#24230; &#25214;&#21040;&#21608;&#26399;</p><pre class="codeinput">[C,I]=find(sinData==1);
+T = I(2)-I(1)
+</pre><pre class="codeoutput">
+T =
+
+    16
+
+</pre>
+			<p>&#30456;&#20301;&#24046;</p><pre class="codeinput">delta = D/T;
+disp([<span class="string">'&#30456;&#20301;&#24046;&#20026;&#65306;'</span>,num2str(delta*2),<span class="string">'pi'</span>])
+</pre><pre class="codeoutput">&#30456;&#20301;&#24046;&#20026;&#65306;0.5pi
+</pre>
+			<h2>2&#65306;&#39057;&#22495;&#21464;&#25442;&#20056;&#31215;&#24471;&#21040;cos&#25968;&#25454;<a name="10"></a></h2>
+			<p>&#39057;&#22495;&#20056;&#31215;&#21518;&#21453;&#21464;&#25442;</p><pre class="codeinput">cosData = real(ifft(fft(sinData).*H));
+<span class="comment">% figure,plot(sinData);hold on</span>
+figure,plot(cosData,<span class="string">'r'</span>)
+title(<span class="string">'&#39057;&#22495;&#21464;&#25442;&#20056;&#31215;&#24471;&#21040;cos&#25968;&#25454;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_06.png" alt="">
+			<h2>......&#39057;&#22495;&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;<a name="11"></a></h2>
+			<p>&#30830;&#35748;&#30456;&#20301;&#24046;pi/2 &#33258;&#30456;&#20851;&#30830;&#23450;&#24310;&#36831;&#28857;&#25968;D</p><pre class="codeinput">[c,l]=xcorr(sinData,cosData,<span class="string">'coeff'</span>);
+<span class="comment">% figure,stem(l,c);</span>
+[m,indx] = max(c);
+D = abs(indx - N) ;
+</pre>
+			<p>&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;</p><pre class="codeinput">figure;plot(sinData);hold <span class="string">on</span>
+plot([cosData(D:end) zeros(1,D-1)],<span class="string">'r'</span>)
+title(<span class="string">'&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;'</span>)
+legend(<span class="string">'&#21464;&#25442;&#21069;'</span>,<span class="string">'&#21464;&#25442;&#21518;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_07.png" alt="">
+			<p>D&#36716;&#25442;&#25104;&#24359;&#24230; &#25214;&#21040;&#21608;&#26399;</p><pre class="codeinput">[C,I]=find(sinData==1);
+T = I(4)-I(3)
+</pre><pre class="codeoutput">
+T =
+
+    16
+
+</pre>
+			<p>&#30456;&#20301;&#24046;</p><pre class="codeinput">delta = D/T;
+disp([<span class="string">'&#30456;&#20301;&#24046;&#20026;&#65306;'</span>,num2str(delta*2),<span class="string">'pi'</span>])
+</pre><pre class="codeoutput">&#30456;&#20301;&#24046;&#20026;&#65306;0.5pi
+</pre>
+			<h2>3.&#23545;&#27604;&#20869;&#32622;&#20989;&#25968; hilbert<a name="15"></a></h2><pre class="codeinput">cosData = imag(hilbert(sinData));
+figure;plot(cosData,<span class="string">'r'</span>)
+title(<span class="string">'&#20869;&#32622;&#20989;&#25968; hilbert&#21464;&#25442;&#25968;&#25454;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_08.png" alt="">
+			<h2>......&#20869;&#32622;&#20989;&#25968; hilbert&#26041;&#27861;&#25968;&#25454;&#26657;&#39564;<a name="16"></a></h2>
+			<p>&#30830;&#35748;&#30456;&#20301;&#24046;pi/2 &#33258;&#30456;&#20851;&#30830;&#23450;&#24310;&#36831;&#28857;&#25968;D</p><pre class="codeinput">[c,l]=xcorr(sinData,cosData,<span class="string">'coeff'</span>);
+<span class="comment">% figure,stem(l,c)</span>
+[m,indx] = max(c);
+D = abs(indx - N)
+</pre><pre class="codeoutput">
+D =
+
+     4
+
+</pre>
+			<p>&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;</p><pre class="codeinput">figure;plot(sinData);hold <span class="string">on</span>
+plot([cosData(D:end) zeros(1,D-1)],<span class="string">'r'</span>)
+title(<span class="string">'&#21464;&#25442;&#21069;&#21518;&#25968;&#25454;&#23545;&#27604;'</span>)
+legend(<span class="string">'&#21464;&#25442;&#21069;'</span>,<span class="string">'&#21464;&#25442;&#21518;'</span>)
+</pre><img vspace="5" hspace="5" src="EX3_1_09.png" alt="">
+			<p>D&#36716;&#25442;&#25104;&#24359;&#24230; &#25214;&#21040;&#21608;&#26399;</p><pre class="codeinput">[C,I]=find(sinData==1);
+T = I(2)-I(1)
+</pre><pre class="codeoutput">
+T =
+
+    16
+
+</pre>
+			<p>&#30456;&#20301;&#24046;</p><pre class="codeinput">delta = D/T;
+disp([<span class="string">'&#30456;&#20301;&#24046;&#20026;&#65306;'</span>,num2str(delta*2),<span class="string">'pi'</span>])
+</pre><pre class="codeoutput">&#30456;&#20301;&#24046;&#20026;&#65306;0.5pi
+</pre>
+			<p class="footer"><br>
+				<a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p>
+		</div>
+		<!--
+##### SOURCE BEGIN #####
+%% 实验III：通信信号统计特性分析、仿真实现及应用
+% 之一： 	Hilbert变换的实现方法
+% 参照例 4.7-1
+% 2016.11.4
+
+%% 准备环境
+clear all
+close all
+clc
+
+%% 生成正弦信号样本
+% N=100点正弦信号1000Hz，采样率16000Hz
+N = 100;
+f = 1000;
+fs = 16000;
+sinData = sin(2*pi*f/fs*(1:N));
+figure(1),plot(sinData)
+title('100点正弦信号1000Hz，采样率16000Hz')
+
+%% 设计hilbert滤波器
+% 时域冲激响应
+step = 30;
+h = zeros(1,step);
+for i = 1 : step
+    ind = bitand(abs(i-step/2),1);
+    if(ind == 1)
+        h(i) = 2/pi/(i-step/2);
+    end
+end
+% show h(n)
+figure(2), stem(h)
+title('时域冲激响应')
+%%
+% 频域传递函数
+H = zeros(1,N);
+for p = 1 : N
+    if(p<= N/2)
+        H(p) = -j;
+    else
+        H(p) = j;
+    end
+end
+% show H(p)
+figure, stem(imag(H))
+title('频域冲激响应')
+%% 1：时域变换卷积运算得到cos数据
+% 时域卷积
+cosData = conv(sinData,h,'same');
+figure(1);plot(cosData,'r')
+title('时域变换卷积运算得到cos数据')
+%% ......时域方法数据校验
+% 确认相位差pi/2
+% 自相关确定延迟点数D
+[c,l]=xcorr(sinData,cosData,'coeff');
+% figure,stem(l,c)
+[m,indx] = max(c);
+D = abs(indx - N) +1
+%%
+% 变换前后数据对比
+figure;plot(sinData);hold on
+plot([cosData(D:end) zeros(1,D-1)],'r')
+title('变换前后数据对比')
+legend('变换前','变换后')
+%%
+% D转换成弧度
+% 找到周期
+[C,I]=find(sinData==1);
+T = I(2)-I(1)
+%%
+% 相位差
+delta = D/T;
+disp(['相位差为：',num2str(delta*2),'pi'])
+%% 2：频域变换乘积得到cos数据
+% 频域乘积后反变换
+cosData = real(ifft(fft(sinData).*H));
+% figure,plot(sinData);hold on
+figure,plot(cosData,'r')
+title('频域变换乘积得到cos数据')
+%% ......频域方法数据校验
+% 确认相位差pi/2
+% 自相关确定延迟点数D
+[c,l]=xcorr(sinData,cosData,'coeff');
+% figure,stem(l,c);
+[m,indx] = max(c);
+D = abs(indx - N) ;
+%%
+% 变换前后数据对比
+figure;plot(sinData);hold on
+plot([cosData(D:end) zeros(1,D-1)],'r')
+title('变换前后数据对比')
+legend('变换前','变换后')
+%%
+% D转换成弧度
+% 找到周期
+[C,I]=find(sinData==1);
+T = I(4)-I(3)
+%%
+% 相位差
+delta = D/T;
+disp(['相位差为：',num2str(delta*2),'pi'])
+%% 3.对比内置函数 hilbert
+cosData = imag(hilbert(sinData));
+figure;plot(cosData,'r')
+title('内置函数 hilbert变换数据')
+%% ......内置函数 hilbert方法数据校验
+% 确认相位差pi/2
+% 自相关确定延迟点数D
+[c,l]=xcorr(sinData,cosData,'coeff');
+% figure,stem(l,c)
+[m,indx] = max(c);
+D = abs(indx - N)
+%%
+% 变换前后数据对比
+figure;plot(sinData);hold on
+plot([cosData(D:end) zeros(1,D-1)],'r')
+title('变换前后数据对比')
+legend('变换前','变换后')
+%%
+% D转换成弧度
+% 找到周期
+[C,I]=find(sinData==1);
+T = I(2)-I(1)
+%%
+% 相位差
+delta = D/T;
+disp(['相位差为：',num2str(delta*2),'pi'])
+##### SOURCE END #####
+-->
+	</body>
+
+</html>

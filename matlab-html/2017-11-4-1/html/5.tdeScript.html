@@ -1,0 +1,508 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+		<title>&#23454;&#39564; I &#20043;5 &#26102;&#38388;&#24310;&#36831;&#20272;&#35745;&#35745;&#31639;&#26426;&#20223;&#30495;</title>
+		<meta name="generator" content="MATLAB 8.3">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<meta name="DC.date" content="2016-11-02">
+		<meta name="DC.source" content="tdeScript.m">
+		<style type="text/css">
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			font,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent
+			}
+			
+			body {
+				line-height: 1
+			}
+			
+			ol,
+			ul {
+				list-style: none
+			}
+			
+			blockquote,
+			q {
+				quotes: none
+			}
+			
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			
+			:focus {
+				outine: 0
+			}
+			
+			ins {
+				text-decoration: none
+			}
+			
+			del {
+				text-decoration: line-through
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			html {
+				min-height: 100%;
+				margin-bottom: 1px;
+			}
+			
+			html body {
+				height: 100%;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 10px;
+				color: #000;
+				line-height: 140%;
+				background: #fff none;
+				overflow-y: scroll;
+			}
+			
+			html body td {
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			h1 {
+				padding: 0px;
+				margin: 0px 0px 25px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: #d55000;
+				line-height: 100%;
+				font-weight: normal;
+			}
+			
+			h2 {
+				padding: 0px;
+				margin: 0px 0px 8px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+				border-bottom: 1px solid #d6d4d4;
+				display: block;
+			}
+			
+			h3 {
+				padding: 0px;
+				margin: 0px 0px 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+			}
+			
+			a {
+				color: #005fce;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #005fce;
+				text-decoration: underline;
+			}
+			
+			a:visited {
+				color: #004aa0;
+				text-decoration: none;
+			}
+			
+			p {
+				padding: 0px;
+				margin: 0px 0px 20px;
+			}
+			
+			img {
+				padding: 0px;
+				margin: 0px 0px 20px;
+				border: none;
+			}
+			
+			p img,
+			pre img,
+			tt img,
+			li img,
+			h1 img,
+			h2 img {
+				margin-bottom: 0px;
+			}
+			
+			ul {
+				padding: 0px;
+				margin: 0px 0px 20px 23px;
+				list-style: square;
+			}
+			
+			ul li {
+				padding: 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ul li ul {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 23px;
+			}
+			
+			ul li ol li {
+				list-style: decimal;
+			}
+			
+			ol {
+				padding: 0px;
+				margin: 0px 0px 20px 0px;
+				list-style: decimal;
+			}
+			
+			ol li {
+				padding: 0px;
+				margin: 0px 0px 7px 23px;
+				list-style-type: decimal;
+			}
+			
+			ol li ol {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ol li ol li {
+				list-style-type: lower-alpha;
+			}
+			
+			ol li ul {
+				padding-top: 7px;
+			}
+			
+			ol li ul li {
+				list-style: square;
+			}
+			
+			.content {
+				font-size: 1.2em;
+				line-height: 140%;
+				padding: 20px;
+			}
+			
+			pre,
+			code {
+				font-size: 12px;
+			}
+			
+			tt {
+				font-size: 1.2em;
+			}
+			
+			pre {
+				margin: 0px 0px 20px;
+			}
+			
+			pre.codeinput {
+				padding: 10px;
+				border: 1px solid #d3d3d3;
+				background: #f7f7f7;
+			}
+			
+			pre.codeoutput {
+				padding: 10px 11px;
+				margin: 0px 0px 20px;
+				color: #4c4c4c;
+			}
+			
+			pre.error {
+				color: red;
+			}
+			
+			@media print {
+				pre.codeinput,
+				pre.codeoutput {
+					word-wrap: break-word;
+					width: 100%;
+				}
+			}
+			
+			span.keyword {
+				color: #0000FF
+			}
+			
+			span.comment {
+				color: #228B22
+			}
+			
+			span.string {
+				color: #A020F0
+			}
+			
+			span.untermstring {
+				color: #B20000
+			}
+			
+			span.syscmd {
+				color: #B28C00
+			}
+			
+			.footer {
+				width: auto;
+				padding: 10px 0px;
+				margin: 25px 0px 0px;
+				border-top: 1px dotted #878787;
+				font-size: 0.8em;
+				line-height: 140%;
+				font-style: italic;
+				color: #878787;
+				text-align: left;
+				float: none;
+			}
+			
+			.footer p {
+				margin: 0px;
+			}
+			
+			.footer a {
+				color: #878787;
+			}
+			
+			.footer a:hover {
+				color: #878787;
+				text-decoration: underline;
+			}
+			
+			.footer a:visited {
+				color: #878787;
+			}
+			
+			table th {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: middle;
+				border: 1px solid #d6d4d4;
+				font-weight: bold;
+			}
+			
+			table td {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: top;
+				border: 1px solid #d6d4d4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<h1>&#23454;&#39564; I &#20043;5  &#26102;&#38388;&#24310;&#36831;&#20272;&#35745;&#35745;&#31639;&#26426;&#20223;&#30495;</h1>
+			<!--introduction-->
+			<!--/introduction-->
+			<h2>Contents</h2>
+			<div>
+				<ul>
+					<li>
+						<a href="#1">&#23454;&#39564; I &#20043;5 &#26102;&#38388;&#24310;&#36831;&#20272;&#35745;&#35745;&#31639;&#26426;&#20223;&#30495;</a>
+					</li>
+					<li>
+						<a href="#2">&#20934;&#22791;&#29615;&#22659;</a>
+					</li>
+					<li>
+						<a href="#3">&#29983;&#25104;&#21333;&#36335;&#20449;&#21495;</a>
+					</li>
+					<li>
+						<a href="#4">&#24310;&#36831;lag&#28857;</a>
+					</li>
+					<li>
+						<a href="#5">&#26174;&#31034;&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;</a>
+					</li>
+					<li>
+						<a href="#6">&#30011;&#20986;&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;&#20114;&#30456;&#20851;</a>
+					</li>
+					<li>
+						<a href="#7">&#25628;&#32034;&#20114;&#30456;&#20851;&#23792;&#20540;&#24471;&#24310;&#36831;&#28857;&#25968;</a>
+					</li>
+					<li>
+						<a href="#8">&#25628;&#32034;&#20114;&#30456;&#20851;&#23792;&#20540;&#24471;&#24310;&#36831;&#28857;&#25968;&#65292;&#25918;&#22823;&#26102;&#38388;&#23610;&#24230;</a>
+					</li>
+				</ul>
+			</div>
+			<h2>&#23454;&#39564; I &#20043;5  &#26102;&#38388;&#24310;&#36831;&#20272;&#35745;&#35745;&#31639;&#26426;&#20223;&#30495;<a name="1"></a></h2><pre class="codeinput"><span class="comment">%2016.10.31</span>
+</pre>
+			<h2>&#20934;&#22791;&#29615;&#22659;<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+<span class="comment">% clf</span>
+clc
+</pre>
+			<h2>&#29983;&#25104;&#21333;&#36335;&#20449;&#21495;<a name="3"></a></h2><pre class="codeinput">num =1000;
+lag = 40;
+s = randn(1,num);
+disp([<span class="string">'&#39044;&#35774;&#20004;&#36335;&#20449;&#21495;&#24310;&#36831;&#20026;&#65306;'</span>,num2str(lag),<span class="string">'&#28857;&#12290;'</span>])
+</pre><pre class="codeoutput">&#39044;&#35774;&#20004;&#36335;&#20449;&#21495;&#24310;&#36831;&#20026;&#65306;40&#28857;&#12290;
+</pre>
+			<h2>&#24310;&#36831;lag&#28857;<a name="4"></a></h2>
+			<p>% %1:&#34917;&#38646; % sLag = [zeros(1,lag) s]; % disp(['&#20449;&#21495;&#24310;&#36831;&#22788;&#20197;0&#22635;&#20805;'])</p><pre class="codeinput"><span class="comment">%2&#65306;&#34917;&#38543;&#26426;&#39640;&#26031;&#25968;</span>
+sLag = [randn(1,lag) s];
+sLag(end-lag+1:end) = [];
+disp([<span class="string">'&#20449;&#21495;&#24310;&#36831;&#22788;&#20197;&#39640;&#26031;&#38543;&#26426;&#25968;&#22635;&#20805;'</span>])
+</pre><pre class="codeoutput">&#20449;&#21495;&#24310;&#36831;&#22788;&#20197;&#39640;&#26031;&#38543;&#26426;&#25968;&#22635;&#20805;
+</pre>
+			<h2>&#26174;&#31034;&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;<a name="5"></a></h2><pre class="codeinput">subplot(2,1,1);plot(s)
+title(<span class="string">'&#21407;&#22987;&#20449;&#21495;'</span>)
+hold <span class="string">on</span>
+subplot(2,1,2);plot(sLag,<span class="string">'r'</span>)
+<span class="comment">% title('&#24310;&#36831;&#20449;&#21495;&#65292;&#24310;&#36831;&#22788;&#20197;0&#22635;&#20805;');</span>
+title(<span class="string">'&#24310;&#36831;&#20449;&#21495;&#65292;&#24310;&#36831;&#22788;&#20197;&#39640;&#26031;&#38543;&#26426;&#25968;&#22635;&#20805;'</span>);
+
+suptitle(<span class="string">'&#20449;&#21495;&#21450;&#20854;&#24310;&#36831;&#20449;&#21495;'</span>)
+</pre><img vspace="5" hspace="5" src="tdeScript_01.png" alt="">
+			<h2>&#30011;&#20986;&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;&#20114;&#30456;&#20851;<a name="6"></a></h2><pre class="codeinput">[x,lags]=xcorr(s,sLag,<span class="string">'coeff'</span>);
+figure;plot(lags,x)
+title(<span class="string">'&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;&#30340;&#20114;&#30456;&#20851;&#65292;&#23792;&#20540;&#22788;&#26368;&#30456;&#20851;'</span>);
+</pre><img vspace="5" hspace="5" src="tdeScript_02.png" alt="">
+			<h2>&#25628;&#32034;&#20114;&#30456;&#20851;&#23792;&#20540;&#24471;&#24310;&#36831;&#28857;&#25968;<a name="7"></a></h2><pre class="codeinput">[mx,indx] = max (x);
+TLag = abs(num - indx);
+disp([<span class="string">'&#32463;&#35745;&#31639;&#30456;&#20851;&#20989;&#25968;&#65292;&#20272;&#35745;&#24310;&#36831;&#28857;&#25968;&#20026;&#65306;'</span>,num2str(TLag),<span class="string">'&#12290;'</span>])
+</pre><pre class="codeoutput">&#32463;&#35745;&#31639;&#30456;&#20851;&#20989;&#25968;&#65292;&#20272;&#35745;&#24310;&#36831;&#28857;&#25968;&#20026;&#65306;40&#12290;
+</pre>
+			<h2>&#25628;&#32034;&#20114;&#30456;&#20851;&#23792;&#20540;&#24471;&#24310;&#36831;&#28857;&#25968;&#65292;&#25918;&#22823;&#26102;&#38388;&#23610;&#24230;<a name="8"></a></h2>
+			<p>a bit more clearly</p><pre class="codeinput">[x,lags]=xcorr(s,sLag,100,<span class="string">'coeff'</span>);
+figure;plot(lags,x)
+title(<span class="string">'&#20004;&#36335;&#21516;&#28304;&#20449;&#21495;&#30340;&#20114;&#30456;&#20851;&#65292;&#23792;&#20540;&#22788;&#26368;&#30456;&#20851;'</span>);
+suptitle(<span class="string">'&#25918;&#22823;&#26102;&#38388;&#23610;&#24230;'</span>)
+</pre><img vspace="5" hspace="5" src="tdeScript_03.png" alt="">
+			<p class="footer"><br>
+				<a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p>
+		</div>
+		<!--
+##### SOURCE BEGIN #####
+%% 实验 I 之5  时间延迟估计计算机仿真
+%% 实验 I 之5  时间延迟估计计算机仿真
+%2016.10.31 
+%% 准备环境
+clear all
+close all
+% clf
+clc
+%% 生成单路信号
+num =1000;
+lag = 40;
+s = randn(1,num);
+disp(['预设两路信号延迟为：',num2str(lag),'点。'])
+%% 延迟lag点
+% % %1:补零
+% % sLag = [zeros(1,lag) s];
+% % disp(['信号延迟处以0填充'])
+
+%2：补随机高斯数
+sLag = [randn(1,lag) s];
+sLag(end-lag+1:end) = [];
+disp(['信号延迟处以高斯随机数填充'])
+%% 显示两路同源信号
+subplot(2,1,1);plot(s)
+title('原始信号')
+hold on 
+subplot(2,1,2);plot(sLag,'r')
+% title('延迟信号，延迟处以0填充');
+title('延迟信号，延迟处以高斯随机数填充');
+
+suptitle('信号及其延迟信号')
+
+%% 画出两路同源信号互相关
+[x,lags]=xcorr(s,sLag,'coeff');
+figure;plot(lags,x)
+title('两路同源信号的互相关，峰值处最相关');
+
+%% 搜索互相关峰值得延迟点数
+[mx,indx] = max (x);
+TLag = abs(num - indx);
+disp(['经计算相关函数，估计延迟点数为：',num2str(TLag),'。'])
+%% 搜索互相关峰值得延迟点数，放大时间尺度
+% a bit more clearly
+[x,lags]=xcorr(s,sLag,100,'coeff');
+figure;plot(lags,x)
+title('两路同源信号的互相关，峰值处最相关');
+suptitle('放大时间尺度')
+##### SOURCE END #####
+-->
+	</body>
+
+</html>

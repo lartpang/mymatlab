@@ -1,0 +1,493 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+		<title>&#23454;&#39564;III&#65306;&#36890;&#20449;&#20449;&#21495;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#20223;&#30495;&#23454;&#29616;&#21450;&#24212;&#29992;</title>
+		<meta name="generator" content="MATLAB 8.5">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<meta name="DC.date" content="2016-11-12">
+		<meta name="DC.source" content="EX3_3.m">
+		<style type="text/css">
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			font,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent
+			}
+			
+			body {
+				line-height: 1
+			}
+			
+			ol,
+			ul {
+				list-style: none
+			}
+			
+			blockquote,
+			q {
+				quotes: none
+			}
+			
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			
+			:focus {
+				outine: 0
+			}
+			
+			ins {
+				text-decoration: none
+			}
+			
+			del {
+				text-decoration: line-through
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			html {
+				min-height: 100%;
+				margin-bottom: 1px;
+			}
+			
+			html body {
+				height: 100%;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 10px;
+				color: #000;
+				line-height: 140%;
+				background: #fff none;
+				overflow-y: scroll;
+			}
+			
+			html body td {
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			h1 {
+				padding: 0px;
+				margin: 0px 0px 25px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: #d55000;
+				line-height: 100%;
+				font-weight: normal;
+			}
+			
+			h2 {
+				padding: 0px;
+				margin: 0px 0px 8px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+				border-bottom: 1px solid #d6d4d4;
+				display: block;
+			}
+			
+			h3 {
+				padding: 0px;
+				margin: 0px 0px 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+			}
+			
+			a {
+				color: #005fce;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #005fce;
+				text-decoration: underline;
+			}
+			
+			a:visited {
+				color: #004aa0;
+				text-decoration: none;
+			}
+			
+			p {
+				padding: 0px;
+				margin: 0px 0px 20px;
+			}
+			
+			img {
+				padding: 0px;
+				margin: 0px 0px 20px;
+				border: none;
+			}
+			
+			p img,
+			pre img,
+			tt img,
+			li img,
+			h1 img,
+			h2 img {
+				margin-bottom: 0px;
+			}
+			
+			ul {
+				padding: 0px;
+				margin: 0px 0px 20px 23px;
+				list-style: square;
+			}
+			
+			ul li {
+				padding: 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ul li ul {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 23px;
+			}
+			
+			ul li ol li {
+				list-style: decimal;
+			}
+			
+			ol {
+				padding: 0px;
+				margin: 0px 0px 20px 0px;
+				list-style: decimal;
+			}
+			
+			ol li {
+				padding: 0px;
+				margin: 0px 0px 7px 23px;
+				list-style-type: decimal;
+			}
+			
+			ol li ol {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ol li ol li {
+				list-style-type: lower-alpha;
+			}
+			
+			ol li ul {
+				padding-top: 7px;
+			}
+			
+			ol li ul li {
+				list-style: square;
+			}
+			
+			.content {
+				font-size: 1.2em;
+				line-height: 140%;
+				padding: 20px;
+			}
+			
+			pre,
+			code {
+				font-size: 12px;
+			}
+			
+			tt {
+				font-size: 1.2em;
+			}
+			
+			pre {
+				margin: 0px 0px 20px;
+			}
+			
+			pre.codeinput {
+				padding: 10px;
+				border: 1px solid #d3d3d3;
+				background: #f7f7f7;
+			}
+			
+			pre.codeoutput {
+				padding: 10px 11px;
+				margin: 0px 0px 20px;
+				color: #4c4c4c;
+			}
+			
+			pre.error {
+				color: red;
+			}
+			
+			@media print {
+				pre.codeinput,
+				pre.codeoutput {
+					word-wrap: break-word;
+					width: 100%;
+				}
+			}
+			
+			span.keyword {
+				color: #0000FF
+			}
+			
+			span.comment {
+				color: #228B22
+			}
+			
+			span.string {
+				color: #A020F0
+			}
+			
+			span.untermstring {
+				color: #B20000
+			}
+			
+			span.syscmd {
+				color: #B28C00
+			}
+			
+			.footer {
+				width: auto;
+				padding: 10px 0px;
+				margin: 25px 0px 0px;
+				border-top: 1px dotted #878787;
+				font-size: 0.8em;
+				line-height: 140%;
+				font-style: italic;
+				color: #878787;
+				text-align: left;
+				float: none;
+			}
+			
+			.footer p {
+				margin: 0px;
+			}
+			
+			.footer a {
+				color: #878787;
+			}
+			
+			.footer a:hover {
+				color: #878787;
+				text-decoration: underline;
+			}
+			
+			.footer a:visited {
+				color: #878787;
+			}
+			
+			table th {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: middle;
+				border: 1px solid #d6d4d4;
+				font-weight: bold;
+			}
+			
+			table td {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: top;
+				border: 1px solid #d6d4d4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content">
+			<h1>&#23454;&#39564;III&#65306;&#36890;&#20449;&#20449;&#21495;&#32479;&#35745;&#29305;&#24615;&#20998;&#26512;&#12289;&#20223;&#30495;&#23454;&#29616;&#21450;&#24212;&#29992;</h1>
+			<!--introduction-->
+			<p>&#20043;&#19977;&#65306; &#31364;&#24102;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;&#20998;&#24067;&#29305;&#24615; &#21442;&#29031;&#20363; 4.7-X 2016.11.4</p>
+			<!--/introduction-->
+			<h2>Contents</h2>
+			<div>
+				<ul>
+					<li>
+						<a href="#1">&#20934;&#22791;&#29615;&#22659;</a>
+					</li>
+					<li>
+						<a href="#2">&#29983;&#25104;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;</a>
+					</li>
+					<li>
+						<a href="#3">&#23637;&#31034;&#31364;&#24102;&#25968;&#25454;</a>
+					</li>
+					<li>
+						<a href="#4">&#21462;&#24471;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;</a>
+					</li>
+					<li>
+						<a href="#5">&#23637;&#31034;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;&#30340;&#26102;&#22495;&#27874;&#24418;</a>
+					</li>
+					<li>
+						<a href="#6">&#23637;&#31034;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;&#30340;&#20998;&#24067;</a>
+					</li>
+				</ul>
+			</div>
+			<h2>&#20934;&#22791;&#29615;&#22659;<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+clc
+</pre>
+			<h2>&#29983;&#25104;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;<a name="2"></a></h2><pre class="codeinput">N=20000;f0=10000;deltf=500;fs=22000;M=50;  <span class="comment">%&#35843;&#29992;&#21442;&#25968;&#35774;&#32622;</span>
+x= Narrowbandsignal (N,f0,deltf,fs,M);     <span class="comment">%&#35843;&#29992;&#20135;&#29983;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#20989;&#25968;</span>
+</pre>
+			<h2>&#23637;&#31034;&#31364;&#24102;&#25968;&#25454;<a name="3"></a></h2>
+			<p>&#26102;&#22495;</p><pre class="codeinput">figure,
+subplot(2,1,1);plot(x);
+title(<span class="string">'&#26102;&#22495;&#27874;&#24418;'</span>)
+<span class="comment">% &#21151;&#29575;&#35889;</span>
+subplot(2,1,2);plot( periodogram( x));
+title(<span class="string">'&#31364;&#24102;&#20449;&#21495;&#21151;&#29575;&#35889;&#23494;&#24230;'</span>)
+x=x/sqrt(var(x));                          <span class="comment">%&#24402;&#19968;&#21270;&#26041;&#24046;&#22788;&#29702;&#31364;&#24102;&#39640;&#26031;&#36807;&#31243;X(t)</span>
+</pre><img vspace="5" hspace="5" src="EX3_3_01.png" alt="">
+			<h2>&#21462;&#24471;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;<a name="4"></a></h2><pre class="codeinput">[At, Ph, A2]=EnvelopPhase(x,f0,fs);        <span class="comment">%&#35843;&#29992;A(t)&#12289;&#21253;&#32476;&#24179;&#26041;&#20135;&#29983;&#20989;&#25968;</span>
+</pre>
+			<h2>&#23637;&#31034;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;&#30340;&#26102;&#22495;&#27874;&#24418;<a name="5"></a></h2><pre class="codeinput"><span class="comment">%&#21253;&#32476;A(t)&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+figure;subplot(3,1,1);plot(At);            <span class="comment">%&#21253;&#32476;A(t)&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#21253;&#32476;A(t)&#26679;&#26412;&#27874;&#24418;'</span>);
+subplot(3,1,2);plot(Ph);                   <span class="comment">%&#30456;&#20301;&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#30456;&#20301;&#26679;&#26412;&#27874;&#24418;'</span>);
+subplot(3,1,3);plot(A2);                   <span class="comment">%&#21253;&#32476;&#24179;&#26041;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#21253;&#32476;&#24179;&#26041;&#20540;&#27874;&#24418;'</span>);
+</pre><img vspace="5" hspace="5" src="EX3_3_02.png" alt="">
+			<h2>&#23637;&#31034;&#31364;&#24102;&#38543;&#26426;&#20449;&#21495;&#30340;&#21253;&#32476;&#12289;&#30456;&#20301;&#12289;&#21253;&#32476;&#24179;&#26041;&#30340;&#20998;&#24067;<a name="6"></a></h2><pre class="codeinput"><span class="comment">%&#21253;&#32476;A(t)&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+LA =0:0.05:4.5;                            <span class="comment">%&#21253;&#32476;&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#21306;&#38388;</span>
+figure;subplot(3,1,1);hist(At,LA);         <span class="comment">%&#21253;&#32476;A(t)&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#21253;&#32476;A(t)&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;'</span>);
+LP=-pi/2:0.05:pi/2;                        <span class="comment">%&#30456;&#20301;&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#21306;&#38388;</span>
+subplot(3,1,2);;hist(Ph,LP);               <span class="comment">%&#30456;&#20301;&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#30456;&#20301;&#26679;&#26412;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;'</span>);
+LA2=0:0.2:16;                              <span class="comment">%&#21253;&#32476;&#24179;&#26041;&#20540;&#30340;&#20998;&#24067;&#21306;&#38388;</span>
+subplot(3,1,3);hist(A2,LA2);               <span class="comment">%&#21253;&#32476;&#24179;&#26041;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;</span>
+title(<span class="string">'&#21253;&#32476;&#24179;&#26041;&#20540;&#30340;&#20998;&#24067;&#30452;&#26041;&#22270;'</span>);
+</pre><img vspace="5" hspace="5" src="EX3_3_03.png" alt="">
+			<p class="footer"><br>
+				<a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p>
+		</div>
+		<!--
+##### SOURCE BEGIN #####
+%% 实验III：通信信号统计特性分析、仿真实现及应用
+% 之三：	窄带信号的包络、相位、包络平方分布特性
+% 参照例 4.7-X
+% 2016.11.4
+
+%% 准备环境
+clear all
+close all
+clc
+
+%% 生成窄带随机信号
+N=20000;f0=10000;deltf=500;fs=22000;M=50;  %调用参数设置
+x= Narrowbandsignal (N,f0,deltf,fs,M);     %调用产生窄带随机信号的函数
+%%  展示窄带数据
+% 时域
+figure,
+subplot(2,1,1);plot(x);
+title('时域波形')
+% 功率谱
+subplot(2,1,2);plot( periodogram( x));
+title('窄带信号功率谱密度')
+x=x/sqrt(var(x));                          %归一化方差处理窄带高斯过程X(t)
+%% 取得窄带随机信号的包络、相位、包络平方
+[At, Ph, A2]=EnvelopPhase(x,f0,fs);        %调用A(t)、包络平方产生函数
+%% 展示窄带随机信号的包络、相位、包络平方的时域波形
+%包络A(t)样本值的分布直方图
+figure;subplot(3,1,1);plot(At);            %包络A(t)样本值的分布直方图
+title('包络A(t)样本波形');      
+subplot(3,1,2);plot(Ph);                   %相位样本值的分布直方图
+title('相位样本波形');
+subplot(3,1,3);plot(A2);                   %包络平方值的分布直方图
+title('包络平方值波形');
+
+%% 展示窄带随机信号的包络、相位、包络平方的分布
+%包络A(t)样本值的分布直方图
+LA =0:0.05:4.5;                            %包络样本值的分布区间
+figure;subplot(3,1,1);hist(At,LA);         %包络A(t)样本值的分布直方图
+title('包络A(t)样本值的分布直方图');      
+LP=-pi/2:0.05:pi/2;                        %相位样本值的分布区间
+subplot(3,1,2);;hist(Ph,LP);               %相位样本值的分布直方图
+title('相位样本值的分布直方图');
+LA2=0:0.2:16;                              %包络平方值的分布区间
+subplot(3,1,3);hist(A2,LA2);               %包络平方值的分布直方图
+title('包络平方值的分布直方图');
+##### SOURCE END #####
+-->
+	</body>
+
+</html>

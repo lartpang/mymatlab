@@ -1,0 +1,543 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+		<title>ycorr</title>
+		<meta name="generator" content="MATLAB 8.3">
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+		<meta name="DC.date" content="2016-11-04">
+		<meta name="DC.source" content="ycorr.m">
+		<style type="text/css">
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			font,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent
+			}
+			
+			body {
+				line-height: 1
+			}
+			
+			ol,
+			ul {
+				list-style: none
+			}
+			
+			blockquote,
+			q {
+				quotes: none
+			}
+			
+			blockquote:before,
+			blockquote:after,
+			q:before,
+			q:after {
+				content: '';
+				content: none
+			}
+			
+			:focus {
+				outine: 0
+			}
+			
+			ins {
+				text-decoration: none
+			}
+			
+			del {
+				text-decoration: line-through
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			html {
+				min-height: 100%;
+				margin-bottom: 1px;
+			}
+			
+			html body {
+				height: 100%;
+				margin: 0px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 10px;
+				color: #000;
+				line-height: 140%;
+				background: #fff none;
+				overflow-y: scroll;
+			}
+			
+			html body td {
+				vertical-align: top;
+				text-align: left;
+			}
+			
+			h1 {
+				padding: 0px;
+				margin: 0px 0px 25px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				color: #d55000;
+				line-height: 100%;
+				font-weight: normal;
+			}
+			
+			h2 {
+				padding: 0px;
+				margin: 0px 0px 8px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+				border-bottom: 1px solid #d6d4d4;
+				display: block;
+			}
+			
+			h3 {
+				padding: 0px;
+				margin: 0px 0px 5px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.1em;
+				color: #000;
+				font-weight: bold;
+				line-height: 140%;
+			}
+			
+			a {
+				color: #005fce;
+				text-decoration: none;
+			}
+			
+			a:hover {
+				color: #005fce;
+				text-decoration: underline;
+			}
+			
+			a:visited {
+				color: #004aa0;
+				text-decoration: none;
+			}
+			
+			p {
+				padding: 0px;
+				margin: 0px 0px 20px;
+			}
+			
+			img {
+				padding: 0px;
+				margin: 0px 0px 20px;
+				border: none;
+			}
+			
+			p img,
+			pre img,
+			tt img,
+			li img,
+			h1 img,
+			h2 img {
+				margin-bottom: 0px;
+			}
+			
+			ul {
+				padding: 0px;
+				margin: 0px 0px 20px 23px;
+				list-style: square;
+			}
+			
+			ul li {
+				padding: 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ul li ul {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 23px;
+			}
+			
+			ul li ol li {
+				list-style: decimal;
+			}
+			
+			ol {
+				padding: 0px;
+				margin: 0px 0px 20px 0px;
+				list-style: decimal;
+			}
+			
+			ol li {
+				padding: 0px;
+				margin: 0px 0px 7px 23px;
+				list-style-type: decimal;
+			}
+			
+			ol li ol {
+				padding: 5px 0px 0px;
+				margin: 0px 0px 7px 0px;
+			}
+			
+			ol li ol li {
+				list-style-type: lower-alpha;
+			}
+			
+			ol li ul {
+				padding-top: 7px;
+			}
+			
+			ol li ul li {
+				list-style: square;
+			}
+			
+			.content {
+				font-size: 1.2em;
+				line-height: 140%;
+				padding: 20px;
+			}
+			
+			pre,
+			code {
+				font-size: 12px;
+			}
+			
+			tt {
+				font-size: 1.2em;
+			}
+			
+			pre {
+				margin: 0px 0px 20px;
+			}
+			
+			pre.codeinput {
+				padding: 10px;
+				border: 1px solid #d3d3d3;
+				background: #f7f7f7;
+			}
+			
+			pre.codeoutput {
+				padding: 10px 11px;
+				margin: 0px 0px 20px;
+				color: #4c4c4c;
+			}
+			
+			pre.error {
+				color: red;
+			}
+			
+			@media print {
+				pre.codeinput,
+				pre.codeoutput {
+					word-wrap: break-word;
+					width: 100%;
+				}
+			}
+			
+			span.keyword {
+				color: #0000FF
+			}
+			
+			span.comment {
+				color: #228B22
+			}
+			
+			span.string {
+				color: #A020F0
+			}
+			
+			span.untermstring {
+				color: #B20000
+			}
+			
+			span.syscmd {
+				color: #B28C00
+			}
+			
+			.footer {
+				width: auto;
+				padding: 10px 0px;
+				margin: 25px 0px 0px;
+				border-top: 1px dotted #878787;
+				font-size: 0.8em;
+				line-height: 140%;
+				font-style: italic;
+				color: #878787;
+				text-align: left;
+				float: none;
+			}
+			
+			.footer p {
+				margin: 0px;
+			}
+			
+			.footer a {
+				color: #878787;
+			}
+			
+			.footer a:hover {
+				color: #878787;
+				text-decoration: underline;
+			}
+			
+			.footer a:visited {
+				color: #878787;
+			}
+			
+			table th {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: middle;
+				border: 1px solid #d6d4d4;
+				font-weight: bold;
+			}
+			
+			table td {
+				padding: 7px 5px;
+				text-align: left;
+				vertical-align: top;
+				border: 1px solid #d6d4d4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content"><pre class="codeinput"><span class="keyword">function</span> [c, lag] = ycorr ( x,y,option)
+<span class="comment">%YCORR &#30456;&#20851;&#20989;&#25968;&#20272;&#35745;&#12290;</span>
+<span class="comment">%   [C LAG] = YCORR(X,Y),</span>
+<span class="comment">%   [C LAG] = YCORR(X,Y&#65292;OPTION),</span>
+<span class="comment">%   OPTION&#21487;&#36873;&#65292;&#19988;&#20026;&#8216;none&#8217;&#12289;&#8216;coeff&#8217;&#12289;&#8216;biased&#8217;&#12289;&#8216;unbiased&#8217;&#20043;&#19968;,</span>
+<span class="comment">%   X&#65292;Y&#26159;&#34892;&#21521;&#37327;&#65292;&#36820;&#20540;C&#26159; 2N-1&#38271;&#24230;&#30340;&#30456;&#20851;&#20989;&#25968;&#65292;N&#26159;X&#65292;Y</span>
+<span class="comment">%   &#20013;&#26368;&#38271;&#32773;&#30340;&#38271;&#24230;&#12290;&#38500;&#20102;&#36755;&#20837;&#21442;&#25968;&#19981;&#21516;&#65292;&#20854;&#20313;&#19982;XCORR&#19968;&#33268;&#12290;</span>
+<span class="comment">%   LAG =-(N-1):(N-1)&#32473;&#20986;C&#30340;&#26631;&#21495;</span>
+
+<span class="comment">%   2016.11.1 aleko.</span>
+
+<span class="comment">%&#35268;&#23450;&#36755;&#20837;&#26377;&#21442;&#25968;&#24418;&#24335;&#20026;&#65288;X&#65292;Y&#65289;&#25110;&#65288;X&#65292;Y&#65292;OPTION&#65289;</span>
+<span class="keyword">if</span> (nargin ~=2 &amp;&amp; nargin ~=3)
+    disp(<span class="string">'2 or 3 nargin needed.'</span>);
+    c=0;lag=0;
+    <span class="keyword">return</span>
+<span class="keyword">else</span>
+    <span class="keyword">if</span> nargin == 2
+        option =<span class="string">'none'</span>;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+<span class="comment">%&#22914;&#26524;&#36755;&#20837;&#21521;&#37327;&#19981;&#31561;&#38271;&#65292;&#34917;0&#20351;&#31561;&#38271;</span>
+N = max(length(x),length(y));
+X = [x zeros(1,N-length(x))];
+Y = [y zeros(1,N-length(y))];
+<span class="comment">%default</span>
+<span class="keyword">if</span> isequal(option,<span class="string">'none'</span>)
+    c0 = sum(X.*Y);
+    <span class="keyword">for</span> m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    <span class="keyword">end</span>
+    c=[fliplr(cright) c0,cleft];
+    lag = -(N-1):N-1;
+    <span class="keyword">return</span>;
+<span class="keyword">end</span>
+<span class="comment">%&#24402;&#19968;&#21270;&#65292;&#33258;&#30456;&#20851;&#32467;&#26524;&#19982;XCORR&#19968;&#33268;&#65292;&#20114;&#30456;&#20851;&#26377;&#24494;&#23567;&#24046;&#24322;&#65292;&#20114;&#30456;&#20851;&#19981;&#20250;&#24402;&#19968;&#21270;&#65292;&#26080;&#20851;</span>
+<span class="keyword">if</span> isequal(option,<span class="string">'coeff'</span>)
+    <span class="keyword">if</span> ~isequal(x,y)
+        disp(<span class="string">'coeff for autocorelation only'</span>);
+        c=0;lag=0;
+        <span class="keyword">return</span>
+    <span class="keyword">end</span>
+    c0 = sum(X.*Y);
+    <span class="keyword">for</span> m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    <span class="keyword">end</span>
+    c=[fliplr(cright) c0,cleft]/c0;
+    lag = -(N-1):N-1;
+    <span class="keyword">return</span>;
+<span class="keyword">end</span>
+<span class="comment">%&#26377;&#20559;&#20272;&#35745;</span>
+<span class="keyword">if</span> isequal(option,<span class="string">'biased'</span>)
+    c0 = sum(X.*Y);
+    <span class="keyword">for</span> m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    <span class="keyword">end</span>
+    c=[fliplr(cright) c0,cleft]/N;
+    lag = -(N-1):N-1;
+    <span class="keyword">return</span>;
+<span class="keyword">end</span>
+<span class="comment">%&#26080;&#20559;&#20272;&#35745;</span>
+<span class="keyword">if</span> isequal(option,<span class="string">'unbiased'</span>)
+    c0 = sum(X.*Y)/N;
+    <span class="keyword">for</span> m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y)/(N-m);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)])/(N-m);
+    <span class="keyword">end</span>
+    c=[fliplr(cright) c0,cleft];
+    lag = -(N-1):N-1;
+    <span class="keyword">return</span>;
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">2 or 3 nargin needed.
+
+ans =
+
+     0
+
+</pre>
+			<p class="footer"><br>
+				<a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p>
+		</div>
+		<!--
+##### SOURCE BEGIN #####
+function [c, lag] = ycorr ( x,y,option)
+%YCORR 相关函数估计。
+%   [C LAG] = YCORR(X,Y), 
+%   [C LAG] = YCORR(X,Y，OPTION), 
+%   OPTION可选，且为‘none’、‘coeff’、‘biased’、‘unbiased’之一, 
+%   X，Y是行向量，返值C是 2N-1长度的相关函数，N是X，Y
+%   中最长者的长度。除了输入参数不同，其余与XCORR一致。
+%   LAG =-(N-1):(N-1)给出C的标号
+
+%   2016.11.1 aleko.
+
+%规定输入有参数形式为（X，Y）或（X，Y，OPTION）
+if (nargin ~=2 && nargin ~=3)
+    disp('2 or 3 nargin needed.');
+    c=0;lag=0;
+    return
+else
+    if nargin == 2
+        option ='none';
+    end
+end
+%如果输入向量不等长，补0使等长
+N = max(length(x),length(y));
+X = [x zeros(1,N-length(x))];
+Y = [y zeros(1,N-length(y))];
+%default
+if isequal(option,'none')
+    c0 = sum(X.*Y);
+    for m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    end
+    c=[fliplr(cright) c0,cleft];
+    lag = -(N-1):N-1;
+    return;
+end
+%归一化，自相关结果与XCORR一致，互相关有微小差异，互相关不会归一化，无关
+if isequal(option,'coeff')
+    if ~isequal(x,y)
+        disp('coeff for autocorelation only');
+        c=0;lag=0;
+        return
+    end
+    c0 = sum(X.*Y);
+    for m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    end
+    c=[fliplr(cright) c0,cleft]/c0;
+    lag = -(N-1):N-1;
+    return;
+end
+%有偏估计
+if isequal(option,'biased')
+    c0 = sum(X.*Y);
+    for m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)]);
+    end
+    c=[fliplr(cright) c0,cleft]/N;
+    lag = -(N-1):N-1;
+    return;
+end
+%无偏估计
+if isequal(option,'unbiased')
+    c0 = sum(X.*Y)/N;
+    for m = 1:N-1
+        cleft(m) =sum([X(m+1:end),zeros(1,m)].* Y)/(N-m);
+        cright(m) =sum(X .* [Y(m+1:end),zeros(1,m)])/(N-m);
+    end
+    c=[fliplr(cright) c0,cleft];
+    lag = -(N-1):N-1;
+    return;
+end
+
+
+
+
+##### SOURCE END #####
+-->
+	</body>
+
+</html>
